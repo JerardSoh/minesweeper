@@ -187,6 +187,8 @@ public class MinesweeperPanel extends JPanel {
                 }
                 if (this.minesweeperService.isMine(row, col)) {
                     displayMine(row, col);
+                } else if (!this.minesweeperService.isRevealed(row, col)) {
+                    buttons[row][col].setBackground(Color.LIGHT_GRAY);
                 }
             }
         }
